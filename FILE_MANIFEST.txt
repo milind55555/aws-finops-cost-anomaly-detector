@@ -1,0 +1,17 @@
+.github/workflows/test.yml
+.gitignore
+LICENSE
+README.md
+docs/architecture.mmd
+docs/architecture.svg
+docs/cost-comparison-template.csv
+docs/evidence/README.md
+docs/slack-alert-sample.json
+lambda/handler.py
+lambda/requirements.txt
+scripts/invoke-local.sh
+terraform/main.tf
+terraform/terraform.tfvars.example
+terraform/variables.tf
+terraform/versions.tf
+tests/test_cost_analysis.py

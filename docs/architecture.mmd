@@ -1,0 +1,17 @@
+flowchart TD
+  Scheduler["EventBridge Scheduler\nDaily cron"] --> Fn["AWS Lambda\nPython + Boto3"]
+  Fn --> CE["Cost Explorer API"]
+  Fn --> CW["CloudWatch metrics"]
+  Fn --> EC2["EC2 inventory"]
+  Fn --> EBS["EBS inventory"]
+  CE --> Compare["Yesterday vs 7-day baseline"]
+  CW --> Util["Low CPU candidate detection"]
+  EC2 --> Util
+  EBS --> Util
+  Compare --> Spike{"Spend increase > 20%?"}
+  Spike -->|Yes| Notify["Slack + SNS notification"]
+  Spike -->|No| Summary["Daily FinOps summary"]
+  Util --> Tags["Tag resources for review"]
+  Tags --> Summary
+  Summary --> Notify
+  Fn --> Logs["CloudWatch Logs"]

@@ -1,0 +1,19 @@
+{
+  "text": "COST ANOMALY",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "COST ANOMALY"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Yesterday spend:* $125.40 USD\n*Trailing 7-day daily average:* $100.00 USD\n*Change vs baseline:* +25.40% (threshold 20%)\n*Idle EC2 candidates:* 2\n*Unattached EBS volumes:* 1\n*Resources tagged for review:* 3\n_No resources were stopped, resized, or deleted. Review candidates with service owners before remediation._"
+      }
+    }
+  ]
+}

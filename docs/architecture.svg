@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+<title id="title">AWS FinOps cost anomaly detector architecture</title>
+<desc id="desc">EventBridge triggers Lambda which queries Cost Explorer, CloudWatch, EC2 and EBS, compares spend to baseline, tags idle resources for review, and sends Slack and SNS alerts.</desc>
+<defs>
+ <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#64748b"/></marker>
+ <style>
+ .b{rx:15;ry:15;stroke-width:2}.t{font:600 19px Arial;fill:#0f172a;text-anchor:middle}.s{font:14px Arial;fill:#334155;text-anchor:middle}.a{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#arr)}.h{font:700 29px Arial;fill:#0f172a}.n{font:15px Arial;fill:#475569}
+ </style>
+</defs>
+<rect width="1400" height="760" fill="#f8fafc"/>
+<text x="55" y="55" class="h">AWS FinOps Cost Anomaly Detector</text>
+<text x="55" y="84" class="n">Daily spend monitoring • idle resource discovery • Slack / SNS notifications</text>
+<rect class="b" x="55" y="265" width="185" height="110" fill="#dbeafe" stroke="#3b82f6"/>
+<text class="t" x="147" y="308">EventBridge</text><text class="s" x="147" y="336">Daily schedule</text>
+<rect class="b" x="315" y="245" width="205" height="150" fill="#ede9fe" stroke="#8b5cf6"/>
+<text class="t" x="417" y="290">AWS Lambda</text><text class="s" x="417" y="320">Python / Boto3</text><text class="s" x="417" y="345">Orchestration</text>
+<rect class="b" x="610" y="100" width="190" height="100" fill="#fef3c7" stroke="#d97706"/>
+<text class="t" x="705" y="140">Cost Explorer</text><text class="s" x="705" y="168">Daily spend data</text>
+<rect class="b" x="610" y="250" width="190" height="100" fill="#dcfce7" stroke="#22c55e"/>
+<text class="t" x="705" y="290">CloudWatch</text><text class="s" x="705" y="318">EC2 CPU metrics</text>
+<rect class="b" x="610" y="405" width="190" height="100" fill="#e0f2fe" stroke="#0284c7"/>
+<text class="t" x="705" y="445">EC2 / EBS</text><text class="s" x="705" y="473">Inventory + tags</text>
+<rect class="b" x="885" y="175" width="210" height="145" fill="#ffedd5" stroke="#f59e0b"/>
+<text class="t" x="990" y="220">FinOps analysis</text><text class="s" x="990" y="250">7-day baseline</text><text class="s" x="990" y="275">20% anomaly threshold</text>
+<rect class="b" x="885" y="405" width="210" height="125" fill="#f1f5f9" stroke="#64748b"/>
+<text class="t" x="990" y="450">Idle candidates</text><text class="s" x="990" y="480">Tag for review</text><text class="s" x="990" y="503">No destructive actions</text>
+<rect class="b" x="1180" y="205" width="170" height="110" fill="#fce7f3" stroke="#db2777"/>
+<text class="t" x="1265" y="248">Slack</text><text class="s" x="1265" y="276">Webhook alert</text>
+<rect class="b" x="1180" y="370" width="170" height="110" fill="#dbeafe" stroke="#2563eb"/>
+<text class="t" x="1265" y="413">Amazon SNS</text><text class="s" x="1265" y="441">Email / subscribers</text>
+<path class="a" d="M240 320 H315"/>
+<path class="a" d="M520 280 C560 280 565 150 610 150"/>
+<path class="a" d="M520 320 H610"/>
+<path class="a" d="M520 355 C560 355 565 455 610 455"/>
+<path class="a" d="M800 150 C845 150 840 220 885 220"/>
+<path class="a" d="M800 300 H885"/>
+<path class="a" d="M800 455 H885"/>
+<path class="a" d="M1095 245 H1180"/>
+<path class="a" d="M1095 465 C1140 465 1135 425 1180 425"/>
+<text class="n" x="55" y="690">Safety default: tag and recommend only. Require explicit review before stopping, resizing, or deleting resources.</text>
+</svg>
